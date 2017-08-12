@@ -174,34 +174,27 @@
 </template>
 
 <script>
+
   var fireballSize = 22;
 
-  var getFireballSpeed = function (left) {
-
-      return left ? 5 : 2;  
-
+  var getFireballSpeed = function(left) {
+    return left ? 5 : 2;
   };
 
-  var  wizardSpeed = 3,
-  wizardWidth = 70;
+  var wizardSpeed = 3;
+  var wizardWidth = 70;
 
-  var getWizardHeight = function () {
-
+  var getWizardHeight = function() {
     return wizardWidth * 1.337;
-    
-  }
+  };
 
-  var getWizardX = function (width) {
+  var getWizardX = function(width) {
+    return (width - wizardWidth) / 2;
+  };
 
-    return (width - 70) / 2;
-
-  }
-
-  var getWizardY = function (height) {
-
-    return height / 3 - getWizardHeight(); // разместил на высоте 2/3 от земли с учетом фигурки волшебника
-
-  }
+  var getWizardY = function(height) {
+    return height / 3 - getWizardHeight();
+  };
 
 </script>
 <script src="./js/game.js"></script>
